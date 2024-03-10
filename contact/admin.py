@@ -8,6 +8,6 @@ class ContactAdmin(admin.ModelAdmin):
     ordering = 'id',
     list_filter = 'first_name','last_name','phone',
     search_fields = 'first_name','last_name',
-
-
+    list_per_page = 10
+    list_max_show_all = 100
 # Register your models here.
