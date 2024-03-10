@@ -5,6 +5,7 @@ from contact import models
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = 'first_name','last_name','phone',
+    ordering = 'id',
 
 
 # Register your models here.
