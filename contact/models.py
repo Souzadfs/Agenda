@@ -18,6 +18,10 @@ class Contact(models.Model):
     description = models.TextField(blank=True)
     show = models.BooleanField(default=True)
     picture = models.ImageField(blank=True, upload_to= 'pictures/%Y/%M')
+    category = models.ForeignKey(Category, on_delete= 
+                                 models.SET_NULL,
+                                 blank=True,
+                                 )
 
 
     def __str__(self) -> str:
