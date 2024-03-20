@@ -9,6 +9,8 @@ from django.utils import timezone
 
 
 class Category(models.Model):
+    class meta:
+        verbose_name = 'Category'
     name = models.CharField(max_length=50)
 
     def __str__(self) -> str:
